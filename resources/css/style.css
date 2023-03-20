@@ -185,6 +185,32 @@ strong {
     grid-column: 3 / 4;
 }
 
+@media only screen and (max-width: 768px) {
+    .meetup-workout-celebrate .images-panel #image-01 {
+    max-width: 50%;
+    }
+
+    .meetup-workout-celebrate .images-panel #image-02 {
+    max-width: 50%;
+    }
+
+    .meetup-workout-celebrate .images-panel #image-03 {
+    max-width: 50%;
+    }
+
+    .meetup-workout-celebrate .images-panel #image-04 {
+    max-width: 50%;
+    }
+
+    .meetup-workout-celebrate .images-panel #image-05 {
+    max-width: 50%;
+    }
+
+    .meetup-workout-celebrate .images-panel #image-06 {
+    max-width: 50%;
+    }
+}
+
 
 /* Quote Section */
 .quote {
