@@ -1,0 +1,279 @@
+/* Universal Styles */
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: lightsalmon;
+}
+
+.menu a {
+    color: yellow;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: white;
+    text-decoration-line: underline;
+}
+
+h2 {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: yellow;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 5rem .8fr .25fr 1fr 5rem; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "mwc mwc mwc"
+    "quote quote quote"
+    "join join join"
+    "footer footer footer";
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+    grid-template-rows: 6rem .8fr .25fr .25fr 6rem; 
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/* Header */
+.header {
+    background-color: teal;
+    grid-area: header;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    margin-left: 5rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: coral;
+}
+
+.header .menu {
+    margin-right: 5rem;
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+}
+
+.header .menu a {
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+
+    .header .logo {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .header .menu {
+        display: flex;
+        flex-direction: row;
+        font-size: .75rem;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header .logo {
+        font-size: 2rem;
+    }
+
+    .header .menu {
+        font-size: .75rem;
+    }
+}
+
+
+/* Meet up. Work out. Celebrate Section */
+.meetup-workout-celebrate {
+    padding: 3rem 5rem 3rem 5rem;
+    grid-area: mwc;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.meetup-workout-celebrate .text {
+    font-family: Helvetica, sans-serif;
+    padding-top: 1rem;
+}
+
+.meetup-workout-celebrate a {
+    color: blue;
+    text-decoration-line: underline;
+}
+
+.meetup-workout-celebrate a:hover {
+    color: white;
+    text-decoration-line: none; 
+}
+
+.meetup-workout-celebrate .images-panel {
+    display: grid;
+    padding-top: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .meetup-workout-celebrate .images-panel {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.meetup-workout-celebrate .images-panel #image-01 {
+    max-width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.meetup-workout-celebrate .images-panel #image-02 {
+    max-width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.meetup-workout-celebrate .images-panel #image-03 {
+    max-width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.meetup-workout-celebrate .images-panel #image-04 {
+    max-width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.meetup-workout-celebrate .images-panel #image-05 {
+    max-width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.meetup-workout-celebrate .images-panel #image-06 {
+    max-width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+
+/* Quote Section */
+.quote {
+    background-color: teal;
+    padding: 3rem 5rem 3rem 5rem;
+    grid-area: quote;
+    grid-row: 3 / 4; 
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote .phrase {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 3rem;
+    color: yellow;
+    padding-bottom: 1rem;
+}
+
+.quote .phrase-credit {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* Come join the fun Section */
+.join {
+    padding: 3rem 5rem 3rem 5rem;
+    grid-area: join;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join .image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.join .image img {
+    max-width: 50%;
+    padding: 1rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .join .image img {
+        max-width: 100%;
+    }
+}
+
+.join .subtitle {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* Footer */
+.footer {
+    background-color: teal;
+    padding: 3rem 5rem 3rem 5rem;
+    grid-area: footer;
+    grid-row: 5 / 6;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: yellow;
+}
+
+.footer .menu {
+    line-height: 1.5rem;
+}
+
+.footer .contact-info {
+    padding-left: 1rem;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5rem;
+    color: yellow;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 0;
+        font-size: 0.75rem;
+    }
+}
+
