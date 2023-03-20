@@ -26,6 +26,7 @@ h2 {
 }
 
 .container {
+    max-height: 100vh;
     display: grid;
     grid-template-rows: 5rem .8fr .25fr 1fr 5rem; 
     grid-template-columns: repeat(3, 1fr);
